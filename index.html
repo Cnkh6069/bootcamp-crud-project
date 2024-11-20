@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Page setup configurations -->
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- sharing css configuration -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <title>Assignment CRUD - Calvin</title>
+  </head>
+
+  <body>
+    <main>
+      <nav class="nav-list">
+        <button id="adminMode">Admin Mode</button>
+        <button id="playerMode">Player Mode</button>
+        <button id="save-button">Save</button>
+      </nav>
+
+      <h2></h2>
+      <div>
+        <h1 class="header">
+          <img
+            class="logo-img"
+            src="https://firebasestorage.googleapis.com/v0/b/ftbc11-sample.appspot.com/o/images%2F1-PRIMARY_CRIMSON.png?alt=media&token=ce9e8333-2a45-44be-adb2-1f1bf054adf7"
+          />
+          Rocket Fundamentals
+          <img
+            class="logo-img"
+            src="https://firebasestorage.googleapis.com/v0/b/ftbc11-sample.appspot.com/o/images%2F1-PRIMARY_CRIMSON.png?alt=media&token=ce9e8333-2a45-44be-adb2-1f1bf054adf7"
+          />
+        </h1>
+      </div>
+      <div>
+        <h1 class="subheader">♦️ ♣️ A Rocket Project ♥️ ♠️</h1>
+      </div>
+      <!---Game Segement-->
+      <div id="container" class="hidden">
+        <div class="instructions">
+          <h4>
+            Instructions: Draw two cards and decide if you want to "Hit" or
+            "Hold". Beat the dealer with a score that is closest to 21!
+          </h4>
+        </div>
+        <div class="game-results">
+          <p><b>Results:</b></p>
+          <div id="output-div"></div>
+        </div>
+        <div>
+          Input:
+          <input id="input-field" />
+          <button id="submit-button">Submit</button>
+        </div>
+        <button id="hit-button">Hit</button>
+        <button id="hold-button">Hold</button>
+      </div>
+      <!---Admin Segement-->
+      <div id="container2" class="hidden">
+        <div>
+          <h4>Key in value to amend or update player cash pool.</h4>
+        </div>
+        <div>
+          <label for="new-value">New Value:</label>
+          <input type="text" id="new-value" />
+          <button id="update-button">Update Stats</button>
+          <h1>Player Information</h1>
+          <p>Name: <span id="player-name"></span></p>
+          <p>Cash Pool: <span id="cashpool-display"></span></p>
+          <button id="delete-button">Wipe Records</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Import program logic -->
+    <script src="modes.js"></script>
+    <script src="variables.js"></script>
+    <script src="data.js"></script>
+    <script src="functions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
